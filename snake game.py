@@ -132,9 +132,9 @@ def gameLoop():
 		snakelist.append(allspriteslist)
 		if len(snakelist)>snakeLength:
    			del snakelist[0]
-   		#just for khud se takraing.... last wala chhod kr sab check kiya qki last mr khopdi h
+   		#crashing into himself
 		for eachSegment in snakelist[:-1]:
-			if eachSegment==allspriteslist:#agar khopdi kisi or body part se match karegi to kahe over na hoga
+			if eachSegment==allspriteslist:#crash 
 				gameOver=True
 		snake(blockSize,snakelist)
 		pygame.display.update()
